@@ -15,9 +15,9 @@ public class Problem1 {
     }
 
     private static int solve(String input, int offset) {
-        String wrapCircular = input + input.substring(0, offset);
-        return IntStream.range(0, wrapCircular.length() - offset)
-                .map(ix -> compareAt(wrapCircular, ix, ix + offset) ? Character.getNumericValue(wrapCircular.charAt(ix)) : 0)
+        int l = input.length();
+        return IntStream.range(0, input.length())
+                .map(ix -> compareAt(input, ix, (ix + offset) % l) ? input.charAt(ix) - '0' : 0)
                 .sum();
     }
 
