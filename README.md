@@ -1,7 +1,7 @@
 # :christmas_tree: Advent-Of-Code-2017 :christmas_tree:
 
 - [x] Problem 1
-- [ ] Problem 2
+- [x] Problem 2
 - [ ] Problem 3
 - [ ] Problem 4
 - [ ] Problem 5
