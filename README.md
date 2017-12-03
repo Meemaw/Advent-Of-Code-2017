@@ -1,32 +1,5 @@
 # :christmas_tree: Advent-Of-Code-2017 :christmas_tree:
 
-- [x] Problem 1
-- [x] Problem 2
-- [x] Problem 3
-- [ ] Problem 4
-- [ ] Problem 5
-- [ ] Problem 6
-- [ ] Problem 7
-- [ ] Problem 8
-- [ ] Problem 9
-- [ ] Problem 10
-- [ ] Problem 11
-- [ ] Problem 12
-- [ ] Problem 13
-- [ ] Problem 14
-- [ ] Problem 15
-- [ ] Problem 16
-- [ ] Problem 17
-- [ ] Problem 18
-- [ ] Problem 19
-- [ ] Problem 20
-- [ ] Problem 21
-- [ ] Problem 22
-- [ ] Problem 23
-- [ ] Problem 24
-- [ ] Problem 25
-- [ ] Problem 27
-- [ ] Problem 28
-- [ ] Problem 29
-- [ ] Problem 30
-- [ ] Problem 31
+- [x] [Day 1: Inverse Captcha](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem1.java)
+- [x] [Day 2: Corruption Checksum](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem2.java)
+- [x] [Day 3: Spiral Memory](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem3.java)
