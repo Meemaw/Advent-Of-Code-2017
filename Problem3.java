@@ -7,57 +7,57 @@ public class Problem3 {
     private static Map<Long, Long> memo = new HashMap<>();
 
     public static class SpiralCircle {
-        private long lowerBound;
-        private long offset;
-        private long spiralEdge;
+        private long firstNumberInCircle;
+        private long cornerEdgeOffset;
+        private long spiralRadius;
 
         public SpiralCircle(long n) {
-            this.spiralEdge = getCircle(n);
-            this.offset = 2 * spiralEdge;
-            this.lowerBound = circleCount(spiralEdge - 1) + 1;
+            this.spiralRadius = calculateRadius(n);
+            this.cornerEdgeOffset = 2 * spiralRadius;
+            this.firstNumberInCircle = numItemsInSpiral(spiralRadius - 1) + 1;
         }
 
         public long[] getCorners() {
-            long upperRight = lowerBound + offset - 1;
-            long upperLeft = upperRight + offset;
-            long lowerLeft = upperLeft + offset;
-            long lowerRight = lowerLeft + offset;
+            long upperRight = firstNumberInCircle + cornerEdgeOffset - 1;
+            long upperLeft = upperRight + cornerEdgeOffset;
+            long lowerLeft = upperLeft + cornerEdgeOffset;
+            long lowerRight = lowerLeft + cornerEdgeOffset;
             return new long[]{upperRight, upperLeft, lowerLeft, lowerRight};
         }
 
-        public long getLowerBound() {
-            return this.lowerBound;
+        public long getFirstNumberInCircle() {
+            return this.firstNumberInCircle;
         }
 
-        public long getSpiralEdge() {
-            return this.spiralEdge;
+        public long getSpiralRadius() {
+            return this.spiralRadius;
         }
 
-        private long circleCount(long y) {
+        private long numItemsInSpiral(long y) {
             if (y == 0) return 1;
             if (memo.containsKey(y)) return memo.get(y);
             long upperCount = y * 2 + 1;
             long lowerCount = upperCount - 2;
-            long res = upperCount * 2 + lowerCount * 2 + circleCount(y - 1);
+            long res = upperCount * 2 + lowerCount * 2 + numItemsInSpiral(y - 1);
             memo.put(y, res);
             return res;
         }
 
-        private long getCircle(long n) {
-            return LongStream.iterate(1, i -> i + 1).filter(i -> circleCount(i) >= n).findFirst().getAsLong();
+        private long calculateRadius(long n) {
+            return LongStream.iterate(1, i -> i + 1).filter(i -> numItemsInSpiral(i) >= n).findFirst().getAsLong();
         }
     }
 
 
     private static long solve1(long n) {
         SpiralCircle spiral = new SpiralCircle(n);
-        long spiralEdge = spiral.getSpiralEdge();
+        long spiralRadius = spiral.getSpiralRadius();
         long[] corners = spiral.getCorners();
 
-        if (n <= corners[0]) return spiralEdge + Math.abs(spiral.getLowerBound() + (spiralEdge - 1) - n);
-        else if (n < corners[1]) return Math.abs((corners[1] + corners[0]) / 2 - n) + spiralEdge;
-        else if (n <= corners[2]) return spiralEdge + Math.abs((corners[2] + corners[1]) / 2 - n);
-        else return Math.abs((corners[2] + corners[3]) / 2 - n) + spiralEdge;
+        if (n <= corners[0]) return spiralRadius + Math.abs(spiral.getFirstNumberInCircle() + (spiralRadius - 1) - n);
+        else if (n < corners[1]) return Math.abs((corners[1] + corners[0]) / 2 - n) + spiralRadius;
+        else if (n <= corners[2]) return spiralRadius + Math.abs((corners[2] + corners[1]) / 2 - n);
+        else return Math.abs((corners[2] + corners[3]) / 2 - n) + spiralRadius;
     }
 
     private static long solve2(int n) {
