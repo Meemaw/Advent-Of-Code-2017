@@ -2,7 +2,7 @@
 
 - [x] Problem 1
 - [x] Problem 2
-- [ ] Problem 3
+- [x] Problem 3
 - [ ] Problem 4
 - [ ] Problem 5
 - [ ] Problem 6
