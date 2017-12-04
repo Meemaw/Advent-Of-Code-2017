@@ -4,9 +4,10 @@ import java.util.stream.LongStream;
 
 public class Problem3 {
 
-    private static Map<Long, Long> memo = new HashMap<>();
 
-    public static class SpiralCircle {
+    private static class SpiralCircle {
+        private static Map<Long, Long> memo = new HashMap<>();
+
         private long firstNumberInCircle;
         private long cornerEdgeOffset;
         private long spiralRadius;
