@@ -27,13 +27,13 @@ public class Problem4 {
         return false;
     }
 
-    public static int solve1(String[][] input) {
-        return Arrays.stream(input).filter(x -> Arrays.stream(x).distinct().toArray().length == x.length).toArray().length;
+    public static long solve1(String[][] input) {
+        return Arrays.stream(input).filter(x -> Arrays.stream(x).distinct().toArray().length == x.length).count();
     }
 
 
-    public static int solve2(String[][] input) {
-        return Arrays.stream(input).filter(x -> !hasAnagrams(x)).toArray().length;
+    public static long solve2(String[][] input) {
+        return Arrays.stream(input).filter(x -> !hasAnagrams(x)).count();
     }
 
 }
