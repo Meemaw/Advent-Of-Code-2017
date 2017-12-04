@@ -28,7 +28,7 @@ public class Problem4 {
     }
 
     public static long solve1(String[][] input) {
-        return Arrays.stream(input).filter(x -> Arrays.stream(x).distinct().toArray().length == x.length).count();
+        return Arrays.stream(input).filter(x -> Arrays.stream(x).distinct().count() == x.length).count();
     }
 
 
