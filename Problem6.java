@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class Problem6 {
@@ -9,10 +11,13 @@ public class Problem6 {
         int maxIx = IntStream.range(0, memory.length).reduce((a, b) -> memory[a] >= memory[b] ? a : b).orElse(0);
         int maxValue = memory[maxIx];
         memory[maxIx] = 0;
-        for (int i = maxIx + 1; i < maxIx + maxValue + 1; i++) {
-            memory[i % memory.length]++;
-        }
-        return memory;
+        return redistribute(memory, (maxIx + 1) % memory.length, maxValue);
+    }
+
+    private static int[] redistribute(int[] memory, int ix, int toRedistribute) {
+        if (toRedistribute == 0) return memory;
+        memory[ix]++;
+        return redistribute(memory, (ix + 1) % memory.length, toRedistribute - 1);
     }
 
     private static int solve1(int[] memory) {
