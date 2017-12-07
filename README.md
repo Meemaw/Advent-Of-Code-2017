@@ -6,3 +6,4 @@
 - [x] [Day 4: High-Entropy Passphrases](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem4.java)
 - [x] [Day 5: A Maze of Twisty Trampolines, All Alike](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem5.java)
 - [x] [Day 6: Memory Reallocation](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem6.java)
+- [x] [Day 7: Recursive Circus](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem7.java)
