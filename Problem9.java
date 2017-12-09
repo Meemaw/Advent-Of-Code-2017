@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Problem99 {
+public class Problem9 {
 
     private enum State {
         GROUP_OPEN, GROUP_CLOSE, GARBAGE, IGNORE, OTHER;
