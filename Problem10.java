@@ -27,10 +27,7 @@ public class Problem10 {
 
     public static String solve2(int[] arr, String inputLengths) {
         int ix = 0, skipSize = 0, numRounds = 64;
-
-        int[] lengths = inputLengths.chars().toArray();
-        int[] suffix = new int[]{17, 31, 73, 47, 23};
-        lengths = concat(lengths, suffix);
+        int[] lengths = concat(inputLengths.chars().toArray(), new int[]{17, 31, 73, 47, 23});
 
         for (int i = 0; i < numRounds; i++) {
             for (int length : lengths) {
@@ -52,5 +49,5 @@ public class Problem10 {
         }
         return arr[0] * arr[1];
     }
-    
+
 }
