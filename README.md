@@ -8,4 +8,5 @@
 - [x] [Day 6: Memory Reallocation](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem6.java)
 - [x] [Day 7: Recursive Circus](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem7.java)
 - [x] [Day 8: I Heard You Like Registers](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem8.java)
-- [x] [Day 9: Stream Processing](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem89java)
+- [x] [Day 9: Stream Processing](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem9java)
+- [x] [Day 10: Knot Hash](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem10java)
