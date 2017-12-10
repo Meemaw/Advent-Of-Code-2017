@@ -22,11 +22,7 @@ public class Problem10 {
     }
 
     private static int denseHash(int[] arr, int ix) {
-        int xor = arr[ix];
-        for (int i = ix + 1; i < ix + 16; i++) {
-            xor ^= arr[i];
-        }
-        return xor;
+        return IntStream.range(ix + 1, ix + 16).reduce(arr[ix], (acc, i) -> acc ^ arr[i]);
     }
 
     public static String solve2(int[] arr, String inputLengths) {
@@ -43,7 +39,7 @@ public class Problem10 {
             }
         }
 
-        int[] hashes = IntStream.range(0, 16).map(x -> denseHash(arr, x * 16)).toArray();
+        int[] hashes = IntStream.range(0, arr.length / 16).map(x -> denseHash(arr, x * 16)).toArray();
         return Arrays.stream(hashes).mapToObj(x -> String.format("%02x", x)).collect(Collectors.joining(""));
     }
 
@@ -56,5 +52,5 @@ public class Problem10 {
         }
         return arr[0] * arr[1];
     }
-
+    
 }
