@@ -11,3 +11,6 @@
 - [x] [Day 9: Stream Processing](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem9.java)
 - [x] [Day 10: Knot Hash](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem10.java)
 - [x] [Day 11: Hex Ed](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem11.java)
+- [x] [Day 12: Digital Plumber](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem12.java)
+
+
