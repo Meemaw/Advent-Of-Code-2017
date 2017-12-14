@@ -14,7 +14,7 @@ public class Problem14 {
     private static String transform(String input, int i) {
         return hexToBinary(hash(String.format("%s-%d", input, i)));
     }
-    
+
     private static String markString(String s, int j) {
         char[] chars = s.toCharArray();
         chars[j] = 'x';
@@ -48,7 +48,7 @@ public class Problem14 {
         long acc = 0;
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length(); j++) {
-                if (map[i].charAt(j) == '1') {
+                if (isTaken(map, i, j)) {
                     markGroup(map, i, j);
                     acc += 1;
                 }
