@@ -1,5 +1,9 @@
 # :christmas_tree: Advent-Of-Code-2017 :christmas_tree:
 
+I decided to do this year's Advent of Code in Java. My expected outcome is to strengthen my knowledge and understanding of Java 8 lambdas and streams. Thus, some of my solutions may may have reduced readability and seem a bit "overstreamed" but it is for greater good.
+
+
+
 - [x] [Day 1: Inverse Captcha](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem1.java)
 - [x] [Day 2: Corruption Checksum](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem2.java)
 - [x] [Day 3: Spiral Memory](https://github.com/Meemaw/Advent-Of-Code-2017/blob/master/Problem3.java)
